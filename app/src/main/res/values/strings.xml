@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Volvo Picking by Vision</string>
+    <string name="main_activity_label">Home</string>
+    <string name="start_button_label">Iniciar</string>
+    <string name="picking_activity_label">Picking</string>
+    <string name="picking_activity_produtction_date_label">Data Produção</string>
+    <string name="scan_login_instruction">Leia o QR Code com as suas credenciais!</string>
+    <string name="scan_kit_instruction">Leia o QR Code do Kit!</string>
+    <string name="invalid_credential">Credencial inválida!</string>
+    <string name="data_load_success">Dados carregados com sucesso!</string>
+    <string name="data_load_error">Ocorreu um erro ao ler o arquivo CSV.</string>
+    <string name="invalid_qr_code">QR Code inválido!</string>s
+</resources>

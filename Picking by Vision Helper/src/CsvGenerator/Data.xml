@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <!-- Operadores -->
+  <Operator>
+    <ID>Operador 1</ID>
+  </Operator>
+  <Operator>
+    <ID>Operador 2</ID>
+  </Operator>
+
+  <!-- Operador 1 -->
+  <Kit>
+    <Operator>Operador 1</Operator>
+    <Station>312</Station>
+    <Module>7</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 1</Operator>
+    <Station>315</Station>
+    <Module>7</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 1</Operator>
+    <Station>308</Station>
+    <Module>7</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 1</Operator>
+    <Station>312</Station>
+    <Module>9</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+
+  <!-- Operador 2 -->
+  <Kit>
+    <Operator>Operador 2</Operator>
+    <Station>356</Station>
+    <Module>8</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 2</Operator>
+    <Station>310</Station>
+    <Module>7</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 2</Operator>
+    <Station>311</Station>
+    <Module>7</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 2</Operator>
+    <Station>350</Station>
+    <Module>9</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+  <Kit>
+    <Operator>Operador 2</Operator>
+    <Station>358</Station>
+    <Module>8</Module>
+    <InitialSequence></InitialSequence>
+  </Kit>
+
+  <!-- Queries -->
+  <Query>select seq_chassi, chassi, nu_box, cd_produto, qt_transmitida, dt_producao, cd_estacao, nu_kit, nu_modulo from ({0}) ORDER BY nu_kit, nu_modulo, seq_chassi, nu_box, cd_produto</Query>
+  <Query>select ki.seq_chassi, to_char(ki.nu_pedido) chassi, ki.nu_box, ki.cd_produto, ki.qt_transmitida, to_char(ki.dt_producao, 'DD/MM/YYYY') dt_producao, ki.cd_estacao, ki.nu_kit, ki.nu_modulo from t_kit_interno ki where ki.nu_kit = {0} and ki.dt_producao between to_date('{1}', 'MM/DD/YYYY') and to_date('{1}', 'MM/DD/YYYY') and ki.cd_estacao = '{2}' and ki.nu_modulo = '{3}' and ki.seq_chassi >= nvl({4}, ki.seq_chassi)</Query>
+
+</Data>
